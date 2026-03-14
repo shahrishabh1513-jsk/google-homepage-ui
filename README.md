@@ -30,17 +30,12 @@ This project recreates the Google landing page interface with a search bar, navi
 
 ---
 
-
----
-
 ## 🚀 Live Run
 👉https://shahrishabh1513-jsk.github.io/google-homepage-ui/
 
 ---
 
 ## 📸 Screenshot
-
-
 
 ---
 
