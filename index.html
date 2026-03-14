@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+    <title>Google</title>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-navbar"> 
+        <a href="https://github.com/shahrishabh1513-jsk" class="account-link">
+            <img src="./Images/Rweblogo.png" alt="account-circle" class="account">      
+        </a>
+        <a href="#" id="apps-button" class="apps-link">
+            <img src="Images/outline_apps_black_24dp.png" alt="apps" class="apps">  
+        </a> 
+        <a class="links" href="https://images.google.com/">Images</a>
+        <a class="links" href="#">Gmail</a>  
+    </div>
+
+    <!-- Apps Slider Modal (Hidden by default) -->
+    <div id="apps-slider" class="apps-slider">
+        <div class="slider-header">
+            <span class="material-icons">account_circle</span>
+            <span class="slider-title">Your favorites</span>
+            <span class="material-icons close-slider">close</span>
+        </div>
+        <div class="slider-grid">
+            <!-- Row 1 -->
+            <div class="slider-item">
+                <span class="material-icons">mail</span>
+                <span>Gmail</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">image</span>
+                <span>Images</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">account_circle</span>
+                <span>Account</span>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="slider-item">
+                <span class="material-icons">search</span>
+                <span>Search</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">video_call</span>
+                <span>Meet</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">map</span>
+                <span>Maps</span>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="slider-item">
+                <span class="material-icons">smart_display</span>
+                <span>YouTube</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">play_circle</span>
+                <span>Play</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">newspaper</span>
+                <span>News</span>
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="slider-item">
+                <span class="material-icons">mail</span>
+                <span>Gmail</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">contacts</span>
+                <span>Contacts</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">drive_folder</span>
+                <span>Drive</span>
+            </div>
+            
+            <!-- Row 5 -->
+            <div class="slider-item">
+                <span class="material-icons">auto_awesome</span>
+                <span>Gemini</span>
+            </div>
+            <div class="slider-item">
+                <span class="material-icons">calendar_month</span>
+                <span>Calendar</span>
+            </div>
+        </div>
+        <div class="slider-footer">
+            <a href="#" class="more-from-google">More from Google</a>
+        </div>
+    </div>
+    <div id="slider-overlay" class="slider-overlay"></div>
+
+    <!-- Main Google Logo -->
+    <img src="Images/google-logo.png" alt="Google Logo" class="logo">
+    
+    <!-- Search Bar -->
+    <div>
+        <input class="search-bar" type="text" placeholder="Search Google or type a URL">
+    </div>  
+    
+    <!-- Search Buttons -->
+    <div class="button-align">
+        <button type="button" class="button1">Google Search</button> 
+        <button type="button" class="button1">I'm Feeling Lucky</button> 
+    </div>
+    
+    <!-- Language Options -->
+    <div class="subtitle-align">
+        <span class="subheading">Google offered in: </span>
+        <a href="#" class="subtitle">हिन्दी</a>
+        <a href="#" class="subtitle">বাংলা</a>
+        <a href="#" class="subtitle">తెలుగు</a>
+        <a href="#" class="subtitle">मराठी</a>
+        <a href="#" class="subtitle">தமிழ்</a>
+        <a href="#" class="subtitle">ગુજરાતી</a>
+        <a href="#" class="subtitle">ಕನ್ನಡ</a>
+        <a href="#" class="subtitle">മലയാളം</a>
+        <a href="#" class="subtitle">ਪੰਜਾਬੀ</a>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a class="footer-text-1" href="#" style="padding-left: 30px;">About</a>
+            <a class="footer-text-1" href="#">Advertising</a>
+            <a class="footer-text-1" href="#">Business</a>
+            <a class="footer-text-1" href="#">How Search works</a>
+            <div class="footer-right">
+                <a class="footer-text-1" href="#">Privacy</a>
+                <a class="footer-text-1" href="#">Terms</a>
+                <a class="footer-text-1" href="#">Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Apps Slider -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const appsButton = document.getElementById('apps-button');
+            const appsSlider = document.getElementById('apps-slider');
+            const sliderOverlay = document.getElementById('slider-overlay');
+            const closeBtn = document.querySelector('.close-slider');
+
+            function openSlider() {
+                appsSlider.classList.add('active');
+                sliderOverlay.classList.add('active');
+            }
+
+            function closeSlider() {
+                appsSlider.classList.remove('active');
+                sliderOverlay.classList.remove('active');
+            }
+
+            appsButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                openSlider();
+            });
+
+            closeBtn.addEventListener('click', closeSlider);
+            sliderOverlay.addEventListener('click', closeSlider);
+        });
+    </script>
+</body>
+</html>
