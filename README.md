@@ -3,7 +3,7 @@
 # 🔎 Google Homepage UI Clone
 
 A modern **Google search homepage clone** built with **HTML, CSS, and JavaScript**.  
-This project recreates the Google landing page interface with a search bar, navigation menu, and interactive apps slider.
+This project recreates the Google landing home page interface with a search bar, navigation menu, and interactive apps slider.
 
 </div>
 
